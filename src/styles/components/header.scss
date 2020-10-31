@@ -1,0 +1,38 @@
+.container.header {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+    width: 100%;
+
+    .left {
+        img {
+            width: 4em;
+        }
+    }
+
+
+    .nav-items {
+        display: flex;
+        align-items: center;
+
+        .nav-item {
+            font-size: 1.02em;
+            margin-right: 50px;
+            cursor: pointer;
+
+            @include media("<=850px") {
+                display: none;
+            }
+        }
+
+        .button {
+            @include button;
+            background: $black;
+            color: $yellow;
+            margin-right: 0;
+        }
+    }
+}
