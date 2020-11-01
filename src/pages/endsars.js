@@ -1,12 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
+import Header from "../components/header"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const EndSars = () => (
-  <Layout>
+  <>
     <SEO title="#EndSARS" />
-  </Layout>
+    <Header />
+  </>
 )
 
 export default EndSars

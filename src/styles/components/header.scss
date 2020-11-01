@@ -1,11 +1,27 @@
-.container.header {
+.header {
     display: flex;
     position: absolute;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 120px;
+    left: 0;
+    right: 0;
+    padding-left: 115px;
     align-items: center;
     width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+
+    @include media(">1300px") {
+        padding: 40px 125px;
+    }
+
+    @include media("<=1100px") {
+        padding: 40px 65px;
+    }
+
+    @include media("<=900px") {
+        padding: 40px 30px;
+    }
 
     .left {
         img {

@@ -1,3 +1,173 @@
 .homepage {
     background: $yellow;
+    height: 100%;
+
+    section {
+        background: $yellow;
+    }
+
+    .hero {
+        position: relative;
+        top: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-top: 20px;
+
+            @include media("<=850px") {
+                margin-top: 10px;
+            }
+
+            .ov-h {
+                overflow: hidden;
+                display: inline-block;
+
+                span {
+                    overflow: hidden;
+                    display: block;
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        .right {
+            flex: 0 0 50%;
+            max-width: 50%;
+            font-size: 1.1em;
+            font-weight: 400;
+            line-height: 1.8;
+
+            @include media("<=1100px") {
+                line-height: 1.7;
+            }
+
+            @include media("<=850px") {
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .grid-con {
+        padding-top: 120px;
+        overflow: hidden;
+    }
+
+    .image-grid {
+        // background: $white;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 6px;
+        grid-template-areas: "small1 small2 main1 main1 small3 small4"
+            "small5 small6 main1 main1 small7 small8"
+            "main2 main2 small9 small10 main3 main3"
+            "main2 main2 small11 small12 main3 main3";
+    }
+
+    // general styles
+    .reveal {
+        position: relative;
+        overflow: hidden;
+        visibility: hidden;
+
+        .image {
+            transform-origin: left;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .reveal-right {
+        position: relative;
+        overflow: hidden;
+        visibility: hidden;
+
+        .image {
+            transform-origin: right;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .about {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        .title {
+            position: absolute;
+            transform: rotate(270deg) translateY(-50%);
+            left: 45px;
+
+            @include media("<=1100px") {
+                left: 5px;
+            }
+
+            @include media("<=850px") {
+                left: -20px;
+            }
+        }
+
+        .left {
+            flex: 0 0 37%;
+            max-width: 37%;
+            background: $white;
+            position: relative;
+            left: 75px;
+
+            .reveal {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image {
+                padding: 5px;
+            }
+
+            @include media("<=1100px") {
+                left: 60px;
+            }
+
+            @include media("<=850px") {
+                flex: 0 0 38%;
+                max-width: 38%;
+                left: 45px;
+            }
+        }
+
+        .right {
+            flex: 0 0 52%;
+            max-width: 52%;
+            font-size: 1.12em;
+            line-height: 1.7;
+
+            @include media("<=1100px") {
+                font-size: 1em;
+            }
+
+            p {
+                margin-bottom: 30px;
+
+                @include media("<=1100px") {
+                    margin-bottom: 20px;
+                }
+
+                @include media("<=850px") {
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .members {
+        background: $black;
+    }
 }

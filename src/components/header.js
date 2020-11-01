@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 const Header = () => (
-  <header className="container header">
+  <header className="header">
     <Link to="/" className="left">
       <img src={require("../images/femco.png")} alt="feminist" />
     </Link>
