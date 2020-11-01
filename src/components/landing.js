@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import Header from "./header"
 import { landingAnim } from "../animations"
+import Members from "./members"
 
 const Landing = () => {
   const {
@@ -250,13 +251,8 @@ const Landing = () => {
             </p>
           </div>
         </section>
-
-        <section className="members container">
-          <div className="left">
-            <div className="title"></div>
-            <div className="button"></div>
-          </div>
-        </section>
+        {/* Members slider */}
+        <Members />
       </div>
     </>
   )
