@@ -37,19 +37,10 @@ const Members = () => {
 
     responsive: [
       {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-
-      {
-        breakpoint: 700,
+        breakpoint: 920,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 1,
         },
       },
     ],
