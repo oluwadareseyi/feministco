@@ -68,31 +68,6 @@
             "main2 main2 small11 small12 main3 main3";
     }
 
-    // general styles
-    .reveal {
-        position: relative;
-        overflow: hidden;
-        visibility: hidden;
-
-        .image {
-            transform-origin: left;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .reveal-right {
-        position: relative;
-        overflow: hidden;
-        visibility: hidden;
-
-        .image {
-            transform-origin: right;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
     .about {
         display: flex;
         position: relative;
