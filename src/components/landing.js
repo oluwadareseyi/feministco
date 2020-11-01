@@ -23,6 +23,7 @@ const Landing = () => {
     small11,
     small12,
     aboutImage,
+    finance,
   } = useStaticQuery(graphql`
     query {
       main1: file(relativePath: { eq: "main-1.png" }) {
@@ -152,6 +153,14 @@ const Landing = () => {
           }
         }
       }
+
+      finance: file(relativePath: { eq: "finance.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -253,6 +262,46 @@ const Landing = () => {
         </section>
         {/* Members slider */}
         <Members />
+        <section className="finances container">
+          <div className="title">What We Have Done.</div>
+          <div className="sub">
+            Here is a summary of the total funds we received and disbursed (in
+            Naira) as of <br /> October 22nd, 2020: Total received =
+            ₦147,855,788.28 (includes donations in USD, <br /> CAD, GBP, EUR,
+            GHS, KES, and BTC)
+          </div>
+
+          <div className="summary-con">
+            <div className="left">
+              <div className="reveal">
+                <div className="image">
+                  <Img fluid={finance.childImageSharp.fluid} />
+                </div>
+              </div>
+            </div>
+
+            <div className="right">
+              <ul>
+                <li>Total disbursed = ₦60,403,235.00</li>
+                <li>Total left = ₦87,452,553.28</li>
+              </ul>
+              <div className="note">
+                The remaining funds will be channeled through the following
+                initiatives/organizations:
+              </div>
+              <ul>
+                <li>#EndSARSresponse (Medical) - ₦20,114,087.25</li>
+                <li>The Legal Aid Network - ₦15,741,459.59</li>
+                <li>
+                  Relief for victims of police brutality and families of the
+                  deceased - ₦40,228,174.51
+                </li>
+                <li>Memorial for the Fallen - ₦5,247,153.197</li>
+                <li>#EndSARSMentalHealthSupport - ₦6,121,678.73</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   )

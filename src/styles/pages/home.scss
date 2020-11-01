@@ -141,4 +141,93 @@
             }
         }
     }
+
+
+    .finances {
+        padding-top: 100px;
+
+        .title {
+            margin-bottom: 30px;
+        }
+
+        .sub {
+            font-size: 1.3em;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .summary-con {
+            display: flex;
+            padding-top: 50px;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                flex: 0 0 44%;
+                max-width: 44%;
+            }
+
+            .right {
+                flex: 0 0 52%;
+                max-width: 52%;
+
+                .note {
+                    padding: 40px 0;
+                    font-weight: 600;
+                    font-size: 1.2em;
+                    line-height: 2;
+
+                    @include media("<=1100px") {
+                        padding: 20px 0;
+                    }
+
+                    @include media("<=850px") {
+                        line-height: 1.6;
+                        font-size: 1.1em;
+                    }
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: grid;
+                    grid-gap: .5rem;
+
+                    li {
+                        display: grid;
+                        grid-gap: 1.8em;
+                        grid-template-columns: 0 1fr;
+                        align-items: start;
+                        line-height: 1.6;
+                        font-size: 1.2em;
+
+                        @include media("<=850px") {
+                            line-height: 1.4;
+                            font-size: 1.1em;
+                        }
+
+                        &::before {
+                            content: '\2605';
+                            font-size: 1.1em;
+                            margin-top: -2px;
+                        }
+                    }
+                }
+            }
+
+            .left {
+                background: $white;
+
+                .reveal {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .image {
+                    padding: 5px;
+                }
+            }
+        }
+    }
 }

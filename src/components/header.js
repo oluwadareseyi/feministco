@@ -8,7 +8,7 @@ const Header = () => (
     </Link>
     <div className="nav-items">
       <div className="nav-item">About Us</div>
-      <div className="nav-item">Our Works</div>
+      <div className="nav-item">Account Summary</div>
       <Link to="/endsars" className="nav-item">
         #EndSARS
       </Link>
