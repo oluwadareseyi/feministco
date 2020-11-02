@@ -34,9 +34,19 @@
 
         .prev,
         .next {
-            color: $white;
-            margin-left: 40px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
             cursor: pointer;
+            margin-left: 40px;
+            border: 1.4px $white solid;
+
+            path {
+                fill: $yellow;
+            }
         }
 
         .button {

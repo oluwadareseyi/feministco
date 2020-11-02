@@ -1,5 +1,7 @@
 import React, { useRef } from "react"
 import Slider from "react-slick"
+import Left from "../assets/arrow-left.svg"
+import Right from "../assets/arrow-right.svg"
 
 const Events = () => {
   const sliderRef = useRef(null)
@@ -64,7 +66,7 @@ const Events = () => {
           onClick={() => sliderRef.current.slickPrev()}
           className="prev"
         >
-          Prev
+          <Left />
         </div>
         <div
           role="switch"
@@ -72,7 +74,7 @@ const Events = () => {
           onClick={() => sliderRef.current.slickNext()}
           className="next"
         >
-          Next
+          <Right />
         </div>
       </div>
     </section>

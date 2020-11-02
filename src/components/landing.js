@@ -321,7 +321,7 @@ const Landing = () => {
               <span>
                 <Twitter />
               </span>
-              <span>@feminist.co</span>
+              <span>@feminist_co</span>
             </div>
             <div className="insta">
               <span>

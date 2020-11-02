@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { useRef } from "react"
 import Slider from "react-slick"
+import Left from "../assets/arrow-left.svg"
+import Right from "../assets/arrow-right.svg"
 
 import BackgroundImage from "gatsby-background-image"
 
@@ -60,7 +62,7 @@ const Members = () => {
             onClick={() => sliderRef.current.slickPrev()}
             className="prev"
           >
-            Prev
+            <Left />
           </div>
           <div
             role="switch"
@@ -68,7 +70,7 @@ const Members = () => {
             onClick={() => sliderRef.current.slickNext()}
             className="next"
           >
-            Next
+            <Right />
           </div>
         </div>
       </div>
