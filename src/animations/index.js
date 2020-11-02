@@ -134,3 +134,27 @@ const imageAnim = () => {
     })
   })
 }
+
+export const textAnim = () => {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.utils.toArray(".flip-text").forEach(container => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        toggleActions: "play none none none",
+      },
+    })
+
+    tl.from(".flip-text .text", 3, {
+      opacity: 0,
+      css: {
+        transform: "rotate3d(0, 1, 0, 90deg)",
+      },
+      delay: 0.5,
+      ease: "Expo.easeOut",
+      stagger: {
+        amount: 1,
+      },
+    })
+  })
+}

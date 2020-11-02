@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 1550px;
     margin: 0 auto;
+    z-index: 5;
 
     @include media(">1300px") {
         padding: 40px 125px;
