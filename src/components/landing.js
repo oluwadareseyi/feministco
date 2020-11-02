@@ -4,6 +4,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import Header from "./header"
 import { landingAnim } from "../animations"
 import Members from "./members"
+import Events from "./events"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const Landing = () => {
   const {
@@ -302,6 +305,10 @@ const Landing = () => {
             </div>
           </div>
         </section>
+
+        {/* Other happenings */}
+
+        <Events />
       </div>
     </>
   )

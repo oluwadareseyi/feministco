@@ -1,0 +1,55 @@
+.happen.container {
+    padding-right: 0;
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    // slider styles
+    .slider {
+        padding: 0;
+
+        .slick-list {
+            .slick-slide>div {
+                padding: 0;
+                padding-right: 40px;
+            }
+        }
+
+        .slick-next,
+        .slick-prev {
+            display: none !important;
+        }
+    }
+
+    .box {
+        width: 100%;
+        font-weight: 500;
+        font-size: 1.5em;
+        background: $black;
+        color: $white;
+        text-align: center;
+        padding: 40px 0;
+
+        @include media("<=800px") {
+            font-size: 1.3em;
+        }
+    }
+
+    .controls {
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 50px;
+        padding-bottom: 0;
+        font-size: 1.1em;
+
+        >div {
+            cursor: pointer;
+        }
+
+        .prev {
+            margin-right: 30px;
+        }
+    }
+}
