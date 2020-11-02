@@ -131,6 +131,7 @@
             font-family: $Sang;
             font-size: 1.6em;
             color: $yellow;
+            font-weight: 500;
 
             @include media("<=950px") {
                 font-size: 1.4em;
