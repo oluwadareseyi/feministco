@@ -24,7 +24,7 @@ const Events = () => {
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -57,7 +57,7 @@ const Events = () => {
           </div>
         </Slider>
       </div>
-      <div className="controls container">
+      <div className="controls">
         <div
           role="switch"
           tabIndex={-1}

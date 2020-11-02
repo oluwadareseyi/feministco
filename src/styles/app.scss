@@ -178,3 +178,50 @@ main {
         height: 100%;
     }
 }
+
+// footer.
+
+footer {
+    background: $black;
+    text-align: center;
+
+    .logo {
+        img {
+            width: 4em;
+        }
+    }
+
+    .socials {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        color: $white;
+        align-items: center;
+        font-size: 0.9em;
+
+        .twitter,
+        .insta {
+            display: flex;
+            align-items: center;
+
+            span {
+                &:first-of-type {
+                    margin-right: 10px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .twitter {
+            margin-right: 70px;
+        }
+    }
+
+    .nav-items {
+        display: flex;
+        padding-top: 60px;
+        color: $white;
+        justify-content: space-evenly;
+        font-size: 0.75em;
+    }
+}

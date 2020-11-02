@@ -1,12 +1,14 @@
 import React, { useEffect } from "react"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Header from "./header"
 import { landingAnim } from "../animations"
 import Members from "./members"
 import Events from "./events"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Insta from "../assets/instagram.svg"
+import Twitter from "../assets/twitter.svg"
 
 const Landing = () => {
   const {
@@ -307,8 +309,37 @@ const Landing = () => {
         </section>
 
         {/* Other happenings */}
-
         <Events />
+
+        {/* footer */}
+        <footer className="container">
+          <Link to="/" className="logo">
+            <img src={require("../images/femco.png")} alt="feminist" />
+          </Link>
+          <div className="socials">
+            <div className="twitter">
+              <span>
+                <Twitter />
+              </span>
+              <span>@feminist.co</span>
+            </div>
+            <div className="insta">
+              <span>
+                <Insta />
+              </span>
+              <span>@feminist.co</span>
+            </div>
+          </div>
+
+          <div className="nav-items">
+            <div className="nav-item">About Us</div>
+            <div className="nav-item">Account Summary</div>
+            <Link to="/endsars" className="nav-item">
+              #EndSARS
+            </Link>
+            <div className="nav-item">Contact Us</div>
+          </div>
+        </footer>
       </div>
     </>
   )
