@@ -64,8 +64,8 @@ const Members = () => {
   }
   return (
     <section className="members container">
-      <div className="title hide">Meet Our Members</div>
-      <div className="left">
+      <div className="title hide anim-up">Meet Our Members</div>
+      <div className="left anim-up">
         <div className="title">Meet Our Members</div>
         <div className="sub">
           We uniquely select our members. Members <br /> can choose to work on

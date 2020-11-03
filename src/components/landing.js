@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Img from "gatsby-image"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Header from "./header"
-import { landingAnim } from "../animations"
+import { landingAnim, textAnim } from "../animations"
 import Members from "./members"
 import Events from "./events"
 import "slick-carousel/slick/slick.css"
@@ -171,6 +171,7 @@ const Landing = () => {
 
   useEffect(() => {
     landingAnim()
+    textAnim()
   }, [])
 
   const imageArr = [
@@ -247,17 +248,17 @@ const Landing = () => {
             </div>
           </div>
           <div className="right">
-            <p>
+            <p className="anim-up">
               In July 2020, Damilola Odufuwa and Odunayo Eweniyi decided to come
               together to create a coalition of feminist women with a vision of
               a Nigeria where equality for all people is a reality in our laws
               and everyday lives.
             </p>
-            <p>
+            <p className="anim-up">
               We approached 12 other exceptional women who were equally
               passionate about changing our country and the role of women.
             </p>
-            <p>
+            <p className="anim-up">
               Together with these women we became the Feminist Coalition. The
               Feminist Coalition aims to further the rights of Nigerian women by
               focusing on three (3) pillars: women’s rights & safety, financial
@@ -268,8 +269,8 @@ const Landing = () => {
         {/* Members slider */}
         <Members />
         <section className="finances container">
-          <div className="title">What We Have Done.</div>
-          <div className="sub">
+          <div className="title anim-up">What We Have Done.</div>
+          <div className="sub anim-up">
             Here is a summary of the total funds we received and disbursed (in
             Naira) as of <br /> October 22nd, 2020: Total received =
             ₦147,855,788.28 (includes donations in USD, <br /> CAD, GBP, EUR,
@@ -285,7 +286,7 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="right">
+            <div className="right anim-up">
               <ul>
                 <li>Total disbursed = ₦60,403,235.00</li>
                 <li>Total left = ₦87,452,553.28</li>

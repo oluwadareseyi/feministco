@@ -171,7 +171,6 @@ export const textAnim = () => {
       y: 100,
       opacity: 0,
       transformOrigin: "center center",
-      scale: 0.9,
       ease: "Power3.easeOut",
     })
   })
