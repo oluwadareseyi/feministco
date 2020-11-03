@@ -35,6 +35,10 @@
         display: flex;
         align-items: center;
 
+        .active-link {
+            color: $yellowSec;
+        }
+
         .show-mb {
             display: none;
 
@@ -85,5 +89,18 @@
 .end-sars {
     .header {
         color: $white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .nav-items {
+            .home {
+                display: block;
+                margin-right: 50px;
+            }
+
+            .hide-end {
+                display: none;
+            }
+        }
     }
 }

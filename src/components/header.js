@@ -7,10 +7,16 @@ const Header = () => (
       <img src={require("../images/femco.png")} alt="feminist" />
     </Link>
     <div className="nav-items">
-      <div className="home show mb">Home</div>
-      <div className="nav-item">About Us</div>
-      <div className="nav-item">Account Summary</div>
-      <Link to="/endsars" className="nav-item show">
+      <Link activeClassName="active-link" to="/" className="home show mb">
+        Home
+      </Link>
+      <div className="nav-item hide-end">About Us</div>
+      <div className="nav-item hide-end">Account Summary</div>
+      <Link
+        activeClassName="active-link"
+        to="/endsars"
+        className="nav-item show"
+      >
         #EndSARS
       </Link>
       <div className="nav-item">Contact Us</div>

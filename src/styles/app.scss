@@ -188,10 +188,11 @@ main {
 }
 
 // footer.
-
 footer {
     background: $black;
     text-align: center;
+    color: $white;
+
 
     .logo {
         img {
@@ -203,7 +204,6 @@ footer {
         margin-top: 40px;
         display: flex;
         justify-content: center;
-        color: $white;
         align-items: center;
         font-size: 0.93em;
 
@@ -228,9 +228,8 @@ footer {
     .nav-items {
         display: flex;
         padding-top: 60px;
-        color: $white;
         justify-content: space-evenly;
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
 }
 

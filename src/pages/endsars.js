@@ -1,9 +1,12 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 import React, { useEffect } from "react"
 import { textAnim } from "../animations"
 import Header from "../components/header"
 import SEO from "../components/seo"
+import Insta from "../assets/instagram.svg"
+import Twitter from "../assets/twitter.svg"
 
 const EndSars = () => {
   const text1 = "endpolice"
@@ -13,9 +16,17 @@ const EndSars = () => {
   useEffect(() => {
     textAnim()
   }, [])
-  const { protesters } = useStaticQuery(graphql`
+  const { protesters, heroes } = useStaticQuery(graphql`
     query {
       protesters: file(relativePath: { eq: "protesters.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      heroes: file(relativePath: { eq: "heroes.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -342,6 +353,54 @@ const EndSars = () => {
             <div className="end topic anim-up">The End?</div>
           </div>
         </section>
+
+        <section className="heroes container">
+          <div className="title-small">WE ARE DOING THIS FOR OUR HEROS</div>
+          <Img className="heroes-img" fluid={heroes.childImageSharp.fluid} />
+        </section>
+
+        <section className="movement container">
+          <div className="title-small">Join the movement. Take action</div>
+          <ul>
+            <li>Join the physical protest</li>
+            <li>Educate the older generation</li>
+            <li>Donate to families of our heros</li>
+            <li>Join the online protest using the hashtag #EndSARS</li>
+          </ul>
+        </section>
+
+        {/* footer */}
+        <footer className="container">
+          <Link to="/" className="logo">
+            <img src={require("../images/femco.png")} alt="feminist" />
+          </Link>
+
+          <div className="title">"All Lives Matter"</div>
+          <div className="title-small">#ENDSARSNOW</div>
+          <div className="socials">
+            <div className="twitter">
+              <span>
+                <Twitter />
+              </span>
+              <span>@feminist_co</span>
+            </div>
+            <div className="insta">
+              <span>
+                <Insta />
+              </span>
+              <span>@feminist.co</span>
+            </div>
+          </div>
+
+          <div className="nav-items">
+            <div className="nav-item">About Us</div>
+            <div className="nav-item">Account Summary</div>
+            <Link to="/endsars" className="nav-item">
+              #EndSARS
+            </Link>
+            <div className="nav-item">Contact Us</div>
+          </div>
+        </footer>
       </div>
     </>
   )

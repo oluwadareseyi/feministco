@@ -200,4 +200,98 @@
             }
         }
     }
+
+    .heroes {
+        background: $yellowSec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .title-small {
+            color: $black;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            @include media("<=500px") {
+                font-size: 1.9em;
+            }
+        }
+
+        .heroes-img {
+            width: 73%;
+
+            @include media("<=tablet") {
+                width: 100%;
+            }
+        }
+    }
+
+    .movement {
+        background: $black;
+
+        .title-small {
+            color: $yellow;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-gap: 2rem;
+            color: $white;
+            justify-content: center;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // grid-gap: 1.8em;
+                line-height: 1.6;
+                font-size: 1.5em;
+                font-weight: 500;
+                position: relative;
+
+                @include media("<=500px") {
+                    line-height: 1.4;
+                    font-size: .85em;
+                }
+
+                &::before {
+                    content: '\2605';
+                    // position: absolute;
+                    font-size: .8em;
+                    margin-top: -2px;
+                    margin-right: 20px;
+
+                    @include media("<=500px") {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background: $yellowSec;
+        color: $black;
+
+        path {
+            fill: $black;
+        }
+
+        .title {
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .title-small {
+            color: $black;
+            font-weight: 700;
+        }
+    }
 }
