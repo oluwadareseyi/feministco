@@ -35,6 +35,14 @@
         display: flex;
         align-items: center;
 
+        .show-mb {
+            display: none;
+
+            @include media("<=850px") {
+                display: block;
+            }
+        }
+
         .nav-item {
             font-size: 1.02em;
             margin-right: 50px;
@@ -45,11 +53,37 @@
             }
         }
 
+        .show {
+            display: block;
+
+            @include media("<=850px") {
+                margin-right: 0;
+                font-weight: 500;
+                font-size: 1.2em;
+            }
+        }
+
+        .show.mb {
+            display: none;
+
+            @include media("<=850px") {
+                display: block;
+                margin-right: 50px;
+            }
+        }
+
+
         .button {
             @include button;
             background: $black;
             color: $yellow;
             margin-right: 0;
         }
+    }
+}
+
+.end-sars {
+    .header {
+        color: $white;
     }
 }

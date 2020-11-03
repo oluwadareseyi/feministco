@@ -9,6 +9,12 @@
         height: 100%;
         position: relative;
         z-index: -1;
+        background-position: 50% 0 !important;
+
+        &::before,
+        &::after {
+            background-position: 50% 0 !important;
+        }
     }
 
     .content {
@@ -57,23 +63,23 @@
 
     }
 
+    .title-small {
+        color: $yellow;
+        font-family: $Sang;
+        font-size: 2.2em;
+        text-align: center;
+
+        @include media("<=500px") {
+            font-size: 1.5em;
+        }
+
+        @include media("<=400px") {
+            font-size: 1.4em;
+        }
+    }
+
     .journey {
         background: $black;
-
-        .title-small {
-            color: $yellow;
-            font-family: $Sang;
-            font-size: 2.2em;
-            text-align: center;
-
-            @include media("<=500px") {
-                font-size: 1.5em;
-            }
-
-            @include media("<=400px") {
-                font-size: 1.4em;
-            }
-        }
 
         .timeline {
             display: grid;

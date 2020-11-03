@@ -27,8 +27,8 @@ const EndSars = () => {
   return (
     <>
       <SEO title="#EndSARS" />
-      <Header />
       <div className="end-sars">
+        <Header />
         <section className="hero">
           <BackgroundImage
             className="protesters"
