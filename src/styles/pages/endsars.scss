@@ -3,6 +3,11 @@
         height: 100vh;
         background: linear-gradient(358.84deg, rgba(0, 0, 0, 0.9) 10.59%, rgba(82, 82, 82, 0.2) 75.48%);
         position: relative;
+
+        @include media("<=500px") {
+            background: linear-gradient(358.84deg, rgba(0, 0, 0, 0.9) 20.59%, rgba(82, 82, 82, 0.2) 75.48%);
+
+        }
     }
 
     .protesters {
