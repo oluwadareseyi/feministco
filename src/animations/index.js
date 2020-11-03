@@ -145,16 +145,34 @@ export const textAnim = () => {
       },
     })
 
-    tl.from(".flip-text .text", 3, {
+    let text = container.querySelectorAll(".text")
+
+    tl.from(text, 3, {
       opacity: 0,
       css: {
         transform: "rotate3d(0, 1, 0, 90deg)",
       },
-      delay: 0.5,
+      delay: 0.3,
       ease: "Expo.easeOut",
       stagger: {
         amount: 1,
       },
+    })
+  })
+
+  gsap.utils.toArray(".anim-up").forEach(anim => {
+    gsap.from(anim, {
+      scrollTrigger: {
+        trigger: anim,
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+      duration: 3,
+      y: 100,
+      opacity: 0,
+      transformOrigin: "center center",
+      scale: 0.9,
+      ease: "Power3.easeOut",
     })
   })
 }

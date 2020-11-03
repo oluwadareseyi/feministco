@@ -6,6 +6,7 @@
 @import './components/events';
 @import './pages/home';
 @import './pages/endsars';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
 @font-face {
     font-family: 'Sangbleu';
@@ -21,7 +22,6 @@
     font-weight: 700;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
 
 
@@ -69,7 +69,7 @@ a {
     }
 
     @include media("<=900px") {
-        padding: 80px 35px;
+        padding: 80px 30px;
     }
 }
 
@@ -231,5 +231,21 @@ footer {
         color: $white;
         justify-content: space-evenly;
         font-size: 0.75em;
+    }
+}
+
+
+// for split text
+.flip-text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    span {
+        display: inline-block;
+        will-change: transform;
+        transform-style: preserve-3d;
+        white-space: pre;
+        perspective: 12vw;
     }
 }
