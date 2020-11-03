@@ -10,8 +10,6 @@ const Header = () => (
       <Link activeClassName="active-link" to="/" className="home show mb">
         Home
       </Link>
-      <div className="nav-item hide-end">About Us</div>
-      <div className="nav-item hide-end">Account Summary</div>
       <Link
         activeClassName="active-link"
         to="/endsars"
@@ -19,6 +17,9 @@ const Header = () => (
       >
         #EndSARS
       </Link>
+      <div className="nav-item hide-end">About Us</div>
+      <div className="nav-item hide-end">Account Summary</div>
+
       <div className="nav-item">Contact Us</div>
       <div className="nav-item button">Join Us</div>
     </div>
