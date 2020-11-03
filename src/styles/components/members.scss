@@ -6,6 +6,66 @@
     align-items: center;
     // overflow: hidden;
 
+    @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    // shown on mobile only
+    .hide {
+        display: none;
+
+        @media (max-width: 750px) {
+            display: block;
+        }
+    }
+
+    .hide.title {
+        @media (max-width: 750px) {
+            color: $yellow;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+    }
+
+    .hide.panels {
+        text-align: right;
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 80px;
+        margin-top: 50px;
+        display: none;
+
+        @media (max-width: 750px) {
+            display: block;
+        }
+    }
+
+    // end
+
+    .panels {
+        display: flex;
+        align-items: center;
+    }
+
+    .prev,
+    .next {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 40px;
+        border: 1.4px $white solid;
+
+        path {
+            fill: $yellow;
+        }
+    }
+
     .left {
         flex: 0 0 40%;
         max-width: 40%;
@@ -13,6 +73,12 @@
         @include media("<=920px") {
             flex: 0 0 47%;
             max-width: 47%;
+        }
+
+        @include media("<=750px") {
+            display: none;
+            flex: unset;
+            max-width: unset;
         }
 
         .title {
@@ -25,28 +91,6 @@
             font-size: 1.2em;
             line-height: 1.7;
             margin-bottom: 50px;
-        }
-
-        .panels {
-            display: flex;
-            align-items: center;
-        }
-
-        .prev,
-        .next {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            cursor: pointer;
-            margin-left: 40px;
-            border: 1.4px $white solid;
-
-            path {
-                fill: $yellow;
-            }
         }
 
         .button {
@@ -73,6 +117,11 @@
             flex: 0 0 45%;
             max-width: 45%;
         }
+
+        @include media("<=750px") {
+            max-width: 100%;
+            flex: unset;
+        }
     }
 
 
@@ -87,6 +136,11 @@
 
                 @include media("<=950px") {
                     padding-left: 20px;
+                }
+
+                @include media("<=750px") {
+                    padding: 0;
+                    padding-right: 30px;
                 }
 
             }
@@ -114,6 +168,10 @@
             height: 400px;
         }
 
+        @include media("<=600px") {
+            height: 500px;
+        }
+
         .reveal {
             height: 100%;
             width: 100%;
@@ -136,11 +194,21 @@
             @include media("<=950px") {
                 font-size: 1.4em;
             }
+
+            @include media("<=750px") {
+                font-size: 1.8em;
+                margin-bottom: 5px;
+            }
+
         }
 
         .position {
             color: #CDCDCD;
             font-size: 1.05em;
+
+            @include media("<=750px") {
+                font-size: 1.2em;
+            }
         }
     }
 }

@@ -13,6 +13,13 @@
         align-items: center;
         justify-content: space-between;
 
+        @include media("<=750px") {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
         .left {
             flex: 0 0 50%;
             max-width: 50%;
@@ -20,6 +27,11 @@
 
             @include media("<=850px") {
                 margin-top: 10px;
+            }
+
+            @include media("<=750px") {
+                max-width: unset;
+                flex: unset;
             }
 
             .ov-h {
@@ -36,6 +48,11 @@
 
         .title {
             font-weight: 500;
+
+            @include media("<=750px") {
+                margin-bottom: 30px;
+                font-size: 2.2em;
+            }
         }
 
         .right {
@@ -52,6 +69,11 @@
             @include media("<=850px") {
                 line-height: 1.5;
             }
+
+            @include media("<=750px") {
+                max-width: unset;
+                flex: unset;
+            }
         }
     }
 
@@ -61,7 +83,6 @@
     }
 
     .image-grid {
-        // background: $white;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -70,6 +91,10 @@
             "small5 small6 main1 main1 small7 small8"
             "main2 main2 small9 small10 main3 main3"
             "main2 main2 small11 small12 main3 main3";
+
+        @include media("<=750px") {
+            grid-gap: 4px;
+        }
     }
 
     .about {
@@ -79,6 +104,12 @@
         align-items: center;
         padding-top: 120px;
         padding-bottom: 120px;
+
+        @include media("<=750px") {
+            flex-direction: column;
+            padding-top: 60px;
+            align-items: flex-start;
+        }
 
         .title {
             position: absolute;
@@ -92,6 +123,14 @@
             @include media("<=850px") {
                 left: -20px;
             }
+
+            @include media("<=750px") {
+                position: static;
+                transform: rotate(0) translateY(0);
+                margin-bottom: 30px;
+                font-weight: 700;
+                font-size: 2em;
+            }
         }
 
         .left {
@@ -101,15 +140,6 @@
             position: relative;
             left: 75px;
 
-            .reveal {
-                width: 100%;
-                height: 100%;
-            }
-
-            .image {
-                padding: 5px;
-            }
-
             @include media("<=1100px") {
                 left: 60px;
             }
@@ -118,6 +148,25 @@
                 flex: 0 0 38%;
                 max-width: 38%;
                 left: 45px;
+            }
+
+            @include media("<=750px") {
+                max-width: unset;
+                flex: unset;
+                position: static;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .reveal {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image {
+                padding: 5px;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -131,6 +180,11 @@
                 font-size: 1em;
             }
 
+            @include media("<=750px") {
+                max-width: unset;
+                flex: unset;
+            }
+
             p {
                 margin-bottom: 30px;
 
@@ -141,6 +195,12 @@
                 @include media("<=850px") {
                     margin-bottom: 5px;
                     margin-top: 5px;
+                }
+
+                @include media("<=750px") {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
                 }
             }
         }
@@ -158,6 +218,14 @@
             font-size: 1.3em;
             line-height: 1.7;
             margin-bottom: 30px;
+
+            @include media("<=tablet") {
+                font-size: 1.2em;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
         .summary-con {
@@ -166,14 +234,27 @@
             justify-content: space-between;
             align-items: center;
 
+            @media (max-width: 750px) {
+                padding-top: 10px;
+            }
+
             .left {
                 flex: 0 0 44%;
                 max-width: 44%;
+
+                @include media("<=750px") {
+                    display: none;
+                }
             }
 
             .right {
                 flex: 0 0 52%;
                 max-width: 52%;
+
+                @include media("<=750px") {
+                    flex: unset;
+                    max-width: unset;
+                }
 
                 .note {
                     padding: 40px 0;

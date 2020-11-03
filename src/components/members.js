@@ -44,10 +44,27 @@ const Members = () => {
           slidesToScroll: 1,
         },
       },
+
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
     ],
   }
   return (
     <section className="members container">
+      <div className="title hide">Meet Our Members</div>
       <div className="left">
         <div className="title">Meet Our Members</div>
         <div className="sub">
@@ -121,6 +138,25 @@ const Members = () => {
             </div>
           </div>
         </Slider>
+      </div>
+
+      <div className="panels hide">
+        <div
+          role="switch"
+          tabIndex={-1}
+          onClick={() => sliderRef.current.slickPrev()}
+          className="prev"
+        >
+          <Left />
+        </div>
+        <div
+          role="switch"
+          tabIndex={-1}
+          onClick={() => sliderRef.current.slickNext()}
+          className="next"
+        >
+          <Right />
+        </div>
       </div>
     </section>
   )
